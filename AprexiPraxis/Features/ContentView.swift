@@ -23,16 +23,31 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            
+           
             coordinator.makeOfferCompanyMainView(idUser: idUser, token: token)
                 .tabItem {
-                    Label("CV", systemImage: "star")
+                    Label("Offers", systemImage: "list.star")
+                }
+            coordinator.makeFollowOfferMainView(idUser: idUser, token: token)
+                .tabItem {
+                    Label("Follow Offers", systemImage: "heart")
+                }
+            coordinator.makeRequestOfferMainView(idUser: idUser, token: token)
+                .tabItem {
+                    Label("Request Offers", systemImage: "rectangle.and.text.magnifyingglass")
+                }
+            
+            coordinator.makeCurriculumView(idUser: idUser, token: token)
+                .tabItem {
+                    Label("Curriculum", systemImage: "person.crop.rectangle")
                 }
         }
-    }
+    } 
 }
 
 #Preview {
-    ContentView( idUser: 4, token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4MywidXNlcm5hbWUiOiJNYXJpbyIsImV4cCI6MTcwMjAyODAyMSwia2lkIjoia2lkXzY1NzJkNGU1OGY4OWE2LjM0MDc1NDk5In0.IxoOL9Cvfau-ZLY5MoYACCHOVjXGDqOh08QM1-DUYMc")
-    
+
+    let coordinator = Coordinator(mock: true)
+    return ContentView( idUser: 4, token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6Ik1hcmlhIiwiZXhwIjoxNzAyNDYyNjE5LCJraWQiOiJraWRfNjU3OTc2OGJmMzA5YjMuMjQwODI1MjkifQ.xCCziaCuVCF3ZLMwynbnSfo6up54YtHKLLo_6lvglxc")
+        .environmentObject(coordinator)
 }

@@ -11,6 +11,7 @@ class OfferCompanyViewModel: ObservableObject {
     private let offerCompanyRepository: OfferCompanyRepository
     
     @Published var isLoading = false
+    //@Published var listOfferCompany: ListOfferCompany = ListOfferCompany.example
     @Published var listOfferCompany: ListOfferCompany?
     @Published var error: Error?
     
@@ -25,12 +26,9 @@ class OfferCompanyViewModel: ObservableObject {
         
         do {
             listOfferCompany = try await offerCompanyRepository.getListOfferCompany(idUser: idUser, token: token)
-            if let unwrappedOffer = listOfferCompany {
-                            print("Esto es offer: ", unwrappedOffer)
-                        } else {
-                            print("Esto es offer: jaja")
-                        }
+        
         } catch(let error) {
+            print("Error:", error)
             self.error = error
         }
         

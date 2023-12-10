@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct RequestOfferDetailRowView: View {
+    let detailRequestOffer: DetailRequestOffer
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+           
+            Text(detailRequestOffer.nameState)
+                .font(.headline)
+            Text(detailRequestOffer.descriptionActionRequest)
+            Text(detailRequestOffer.dateRequest)
+        }
     }
 }
 
 #Preview {
-    RequestOfferDetailRowView()
+    RequestOfferDetailRowView(detailRequestOffer: .example)
 }

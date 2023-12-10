@@ -15,9 +15,13 @@ struct LiveCompanyRemoteService: CompanyRemoteService {
         self.networkClient = networkClient
     }
     
-    func getCompany() async throws -> [Company] {
-        let response: APIResponse<Company> = try await networkClient.getCall(url: NetworkConstants.companyNetworkUrl, queryParams: nil)
-        
-        return response.results
+    func getCompany(idUser: Int, idCompany: Int, token: String) async throws -> Company{
+        let queryParams: [String: String] = [
+            "idUser": String(idUser),
+            "idCompany": String(idCompany),
+            "token": token
+        ]
+    return try await networkClient.getCall(url: NetworkConstants.companyNetworkUrl, queryParams: queryParams)
     }
+
 }

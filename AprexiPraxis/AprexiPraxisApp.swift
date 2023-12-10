@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct AprexiPraxisApp: App {
+    let coordinator = Coordinator()
+    
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            SplashView().environmentObject(coordinator)
         }
     }
 }

@@ -23,8 +23,8 @@ struct Company: Decodable {
     let numWorkers: Int
     let nameTypeCompany: String
     let nameSectorBusiness: String
-    let logoCompany: String
-    let imageCompany: String
+    let logoCompany: String?
+    let imageCompany: String?
     let followCompany: Int
     let success: Bool
     let idError: Int?

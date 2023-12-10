@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SplashView: View {
+/*struct SplashView: View {
     @State private var isActive = false
 
     var body: some View {
@@ -22,9 +22,31 @@ struct SplashView: View {
                 LoginView()
             })
     }
-}
+}*/ 
+
+struct SplashView: View {
+    @State private var isActive = false
+
+    var body: some View {
+        VStack {
+            Text("Aprexi")
+                .font(.largeTitle)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                        self.isActive = true
+                    }
+                }
+        }
+        .fullScreenCover(isPresented: $isActive, content: {
+            NavigationView {
+                LoginView()
+            }
+        })
+    }
+} 
 
 
 #Preview {
     SplashView()
 }
+

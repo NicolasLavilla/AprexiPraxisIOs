@@ -11,26 +11,28 @@ class LoginViewModel: ObservableObject {
     private let loginRepository: LoginRepository
     
     @Published var isLoading = false
-    @Published var login: Login?
-    @Published var error: Error? = nil // Asignación de valor inicial
+    @Published var error: Error?
     
     init(loginRepository: LoginRepository) {
         self.loginRepository = loginRepository
     }
     
     @MainActor
-    func getLogin(email: String, password: String) async {
+    func getLogin(email: String, password: String) async throws -> Login? {
         do {
             error = nil
             isLoading = true
             
-            login = try await loginRepository.getLogin(email: email, password: password)
-                
+            let loginResult = try await loginRepository.getLogin(email: email, password: password)
+            
+            print(loginResult)
+            return Login(success: loginResult.success, idUser: loginResult.idUser, token: loginResult.token)
+               
         } catch {
+            print("Error:", error)
             self.error = error
+            return nil // Añade un valor de retorno en caso de error
         }
-            isLoading = false
-        
     }
-}
 
+}

@@ -42,12 +42,58 @@
 		F094867A2B0CC8D7000F4B13 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09486792B0CC8D7000F4B13 /* RegisterViewModel.swift */; };
 		F094867C2B0CC8E3000F4B13 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094867B2B0CC8E3000F4B13 /* LoginView.swift */; };
 		F094867E2B0CC8EF000F4B13 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094867D2B0CC8EF000F4B13 /* LoginViewModel.swift */; };
+		F09BE89D2B237A93009C788C /* OfferCompanyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09BE89C2B237A93009C788C /* OfferCompanyRowView.swift */; };
 		F0B3CBFF2B1B7D7000ADC433 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3CBFE2B1B7D7000ADC433 /* SplashView.swift */; };
 		F0B3CC022B1B82D000ADC433 /* LoginRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3CC012B1B82D000ADC433 /* LoginRemoteService.swift */; };
 		F0B3CC042B1B82EB00ADC433 /* MockLoginRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3CC032B1B82EB00ADC433 /* MockLoginRemoteService.swift */; };
 		F0B3CC062B1B830100ADC433 /* LiveLoginRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3CC052B1B830100ADC433 /* LiveLoginRemoteService.swift */; };
 		F0B3CC082B1B831400ADC433 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3CC072B1B831400ADC433 /* LoginRepository.swift */; };
 		F0B3CC0A2B1B838500ADC433 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3CC092B1B838500ADC433 /* Login.swift */; };
+		F0BB0A512B27A63600849F33 /* CurriculumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A502B27A63600849F33 /* CurriculumView.swift */; };
+		F0BB0A532B27A64500849F33 /* CurriculumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A522B27A64500849F33 /* CurriculumViewModel.swift */; };
+		F0BB0A5A2B27A68E00849F33 /* StudiesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A592B27A68E00849F33 /* StudiesRowView.swift */; };
+		F0BB0A5C2B27A69F00849F33 /* ExperienceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A5B2B27A69F00849F33 /* ExperienceRowView.swift */; };
+		F0BB0A5E2B27A6B400849F33 /* LanguagesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A5D2B27A6B400849F33 /* LanguagesRowView.swift */; };
+		F0BB0A602B27A6C800849F33 /* LicenseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A5F2B27A6C800849F33 /* LicenseRowView.swift */; };
+		F0BB0A622B27A6DD00849F33 /* ProfessionalProyectsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A612B27A6DD00849F33 /* ProfessionalProyectsRowView.swift */; };
+		F0BB0A642B27A75C00849F33 /* CurriculumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A632B27A75C00849F33 /* CurriculumRepository.swift */; };
+		F0BB0A672B27A7A200849F33 /* CurriculumRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A662B27A7A200849F33 /* CurriculumRemoteService.swift */; };
+		F0BB0A692B27A7BE00849F33 /* MockCurriculumRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A682B27A7BE00849F33 /* MockCurriculumRemoteService.swift */; };
+		F0BB0A6B2B27A7D800849F33 /* LiveCurriculumRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A6A2B27A7D800849F33 /* LiveCurriculumRemoteService.swift */; };
+		F0BB0A6D2B27A85900849F33 /* Curriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A6C2B27A85900849F33 /* Curriculum.swift */; };
+		F0BB0A6F2B27AC7B00849F33 /* Studies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A6E2B27AC7B00849F33 /* Studies.swift */; };
+		F0BB0A722B27AD7B00849F33 /* StudiesRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A712B27AD7B00849F33 /* StudiesRemoteService.swift */; };
+		F0BB0A742B27AD9800849F33 /* MockStudiesRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A732B27AD9800849F33 /* MockStudiesRemoteService.swift */; };
+		F0BB0A762B27ADAB00849F33 /* LiveStudiesRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A752B27ADAB00849F33 /* LiveStudiesRemoteService.swift */; };
+		F0BB0A782B27AE6900849F33 /* StudiesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A772B27AE6900849F33 /* StudiesRepository.swift */; };
+		F0BB0A7A2B27AF6500849F33 /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A792B27AF6500849F33 /* Experience.swift */; };
+		F0BB0A7D2B27B04300849F33 /* ExperienceRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A7C2B27B04300849F33 /* ExperienceRemoteService.swift */; };
+		F0BB0A7F2B27B05A00849F33 /* MockExperienceRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A7E2B27B05A00849F33 /* MockExperienceRemoteService.swift */; };
+		F0BB0A812B27B06B00849F33 /* LiveExperienceRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A802B27B06B00849F33 /* LiveExperienceRemoteService.swift */; };
+		F0BB0A832B27B11C00849F33 /* ExperienceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A822B27B11C00849F33 /* ExperienceRepository.swift */; };
+		F0BB0A852B27B1FD00849F33 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A842B27B1FD00849F33 /* Languages.swift */; };
+		F0BB0A882B27B2E400849F33 /* LanguagesRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A872B27B2E400849F33 /* LanguagesRemoteService.swift */; };
+		F0BB0A8A2B27B2F900849F33 /* MockLanguageRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A892B27B2F900849F33 /* MockLanguageRemoteService.swift */; };
+		F0BB0A8C2B27B31E00849F33 /* LiveLanguageRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A8B2B27B31E00849F33 /* LiveLanguageRemoteService.swift */; };
+		F0BB0A8E2B27B3CC00849F33 /* LanguagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A8D2B27B3CC00849F33 /* LanguagesRepository.swift */; };
+		F0BB0A902B27B54700849F33 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A8F2B27B54700849F33 /* License.swift */; };
+		F0BB0A932B27B86700849F33 /* LicenseRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A922B27B86700849F33 /* LicenseRemoteService.swift */; };
+		F0BB0A952B27B87900849F33 /* MockLicenseRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A942B27B87900849F33 /* MockLicenseRemoteService.swift */; };
+		F0BB0A972B27B89000849F33 /* LiveLicenseRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A962B27B89000849F33 /* LiveLicenseRemoteService.swift */; };
+		F0BB0A992B27B92F00849F33 /* LicenseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A982B27B92F00849F33 /* LicenseRepository.swift */; };
+		F0BB0A9B2B27BA6100849F33 /* ProfessionalProyects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A9A2B27BA6100849F33 /* ProfessionalProyects.swift */; };
+		F0BB0A9E2B27BB8800849F33 /* ProfessionalProyectsRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A9D2B27BB8800849F33 /* ProfessionalProyectsRemoteService.swift */; };
+		F0BB0AA02B27BB9F00849F33 /* MockProfessionalProyectsRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0A9F2B27BB9F00849F33 /* MockProfessionalProyectsRemoteService.swift */; };
+		F0BB0AA22B27BBB600849F33 /* LiveProfessionalProyectsRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0AA12B27BBB600849F33 /* LiveProfessionalProyectsRemoteService.swift */; };
+		F0BB0AA42B27BC4900849F33 /* ProfessionalProyectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BB0AA32B27BC4900849F33 /* ProfessionalProyectsRepository.swift */; };
+		F0CFF78E2B24DD4E0072AE3E /* FollowOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFF78D2B24DD4E0072AE3E /* FollowOfferView.swift */; };
+		F0CFF7902B24DD5F0072AE3E /* FollowOfferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFF78F2B24DD5F0072AE3E /* FollowOfferViewModel.swift */; };
+		F0CFF7932B24EC010072AE3E /* RequestOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFF7922B24EC010072AE3E /* RequestOfferView.swift */; };
+		F0CFF7952B24EC1C0072AE3E /* RequestOfferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFF7942B24EC1C0072AE3E /* RequestOfferViewModel.swift */; };
+		F0CFF7972B24FB520072AE3E /* RequestOfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFF7962B24FB520072AE3E /* RequestOfferRowView.swift */; };
+		F0CFF79A2B24FE0A0072AE3E /* RequestOfferDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFF7992B24FE0A0072AE3E /* RequestOfferDetailView.swift */; };
+		F0CFF79C2B24FE240072AE3E /* RequestOfferDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFF79B2B24FE240072AE3E /* RequestOfferDetailViewModel.swift */; };
+		F0CFF79E2B2513DE0072AE3E /* RequestOfferDetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFF79D2B2513DE0072AE3E /* RequestOfferDetailRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,12 +133,58 @@
 		F09486792B0CC8D7000F4B13 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F094867B2B0CC8E3000F4B13 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F094867D2B0CC8EF000F4B13 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F09BE89C2B237A93009C788C /* OfferCompanyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCompanyRowView.swift; sourceTree = "<group>"; };
 		F0B3CBFE2B1B7D7000ADC433 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F0B3CC012B1B82D000ADC433 /* LoginRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRemoteService.swift; sourceTree = "<group>"; };
 		F0B3CC032B1B82EB00ADC433 /* MockLoginRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginRemoteService.swift; sourceTree = "<group>"; };
 		F0B3CC052B1B830100ADC433 /* LiveLoginRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLoginRemoteService.swift; sourceTree = "<group>"; };
 		F0B3CC072B1B831400ADC433 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		F0B3CC092B1B838500ADC433 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		F0BB0A502B27A63600849F33 /* CurriculumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumView.swift; sourceTree = "<group>"; };
+		F0BB0A522B27A64500849F33 /* CurriculumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumViewModel.swift; sourceTree = "<group>"; };
+		F0BB0A592B27A68E00849F33 /* StudiesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudiesRowView.swift; sourceTree = "<group>"; };
+		F0BB0A5B2B27A69F00849F33 /* ExperienceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceRowView.swift; sourceTree = "<group>"; };
+		F0BB0A5D2B27A6B400849F33 /* LanguagesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesRowView.swift; sourceTree = "<group>"; };
+		F0BB0A5F2B27A6C800849F33 /* LicenseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseRowView.swift; sourceTree = "<group>"; };
+		F0BB0A612B27A6DD00849F33 /* ProfessionalProyectsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalProyectsRowView.swift; sourceTree = "<group>"; };
+		F0BB0A632B27A75C00849F33 /* CurriculumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumRepository.swift; sourceTree = "<group>"; };
+		F0BB0A662B27A7A200849F33 /* CurriculumRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A682B27A7BE00849F33 /* MockCurriculumRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCurriculumRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A6A2B27A7D800849F33 /* LiveCurriculumRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCurriculumRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A6C2B27A85900849F33 /* Curriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum.swift; sourceTree = "<group>"; };
+		F0BB0A6E2B27AC7B00849F33 /* Studies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studies.swift; sourceTree = "<group>"; };
+		F0BB0A712B27AD7B00849F33 /* StudiesRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudiesRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A732B27AD9800849F33 /* MockStudiesRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStudiesRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A752B27ADAB00849F33 /* LiveStudiesRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStudiesRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A772B27AE6900849F33 /* StudiesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudiesRepository.swift; sourceTree = "<group>"; };
+		F0BB0A792B27AF6500849F33 /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
+		F0BB0A7C2B27B04300849F33 /* ExperienceRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A7E2B27B05A00849F33 /* MockExperienceRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExperienceRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A802B27B06B00849F33 /* LiveExperienceRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveExperienceRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A822B27B11C00849F33 /* ExperienceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceRepository.swift; sourceTree = "<group>"; };
+		F0BB0A842B27B1FD00849F33 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		F0BB0A872B27B2E400849F33 /* LanguagesRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A892B27B2F900849F33 /* MockLanguageRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLanguageRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A8B2B27B31E00849F33 /* LiveLanguageRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLanguageRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A8D2B27B3CC00849F33 /* LanguagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesRepository.swift; sourceTree = "<group>"; };
+		F0BB0A8F2B27B54700849F33 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		F0BB0A922B27B86700849F33 /* LicenseRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A942B27B87900849F33 /* MockLicenseRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLicenseRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A962B27B89000849F33 /* LiveLicenseRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLicenseRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A982B27B92F00849F33 /* LicenseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseRepository.swift; sourceTree = "<group>"; };
+		F0BB0A9A2B27BA6100849F33 /* ProfessionalProyects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalProyects.swift; sourceTree = "<group>"; };
+		F0BB0A9D2B27BB8800849F33 /* ProfessionalProyectsRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalProyectsRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0A9F2B27BB9F00849F33 /* MockProfessionalProyectsRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProfessionalProyectsRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0AA12B27BBB600849F33 /* LiveProfessionalProyectsRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveProfessionalProyectsRemoteService.swift; sourceTree = "<group>"; };
+		F0BB0AA32B27BC4900849F33 /* ProfessionalProyectsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalProyectsRepository.swift; sourceTree = "<group>"; };
+		F0CFF78D2B24DD4E0072AE3E /* FollowOfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowOfferView.swift; sourceTree = "<group>"; };
+		F0CFF78F2B24DD5F0072AE3E /* FollowOfferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowOfferViewModel.swift; sourceTree = "<group>"; };
+		F0CFF7922B24EC010072AE3E /* RequestOfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOfferView.swift; sourceTree = "<group>"; };
+		F0CFF7942B24EC1C0072AE3E /* RequestOfferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOfferViewModel.swift; sourceTree = "<group>"; };
+		F0CFF7962B24FB520072AE3E /* RequestOfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOfferRowView.swift; sourceTree = "<group>"; };
+		F0CFF7992B24FE0A0072AE3E /* RequestOfferDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOfferDetailView.swift; sourceTree = "<group>"; };
+		F0CFF79B2B24FE240072AE3E /* RequestOfferDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOfferDetailViewModel.swift; sourceTree = "<group>"; };
+		F0CFF79D2B2513DE0072AE3E /* RequestOfferDetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOfferDetailRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +262,12 @@
 				F09486392B0CC1CB000F4B13 /* TokenRepository.swift */,
 				F094863B2B0CC1D9000F4B13 /* CompanyRepository.swift */,
 				F0B3CC072B1B831400ADC433 /* LoginRepository.swift */,
+				F0BB0A632B27A75C00849F33 /* CurriculumRepository.swift */,
+				F0BB0A772B27AE6900849F33 /* StudiesRepository.swift */,
+				F0BB0A822B27B11C00849F33 /* ExperienceRepository.swift */,
+				F0BB0A8D2B27B3CC00849F33 /* LanguagesRepository.swift */,
+				F0BB0A982B27B92F00849F33 /* LicenseRepository.swift */,
+				F0BB0AA32B27BC4900849F33 /* ProfessionalProyectsRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -177,6 +275,12 @@
 		F09486342B0CC072000F4B13 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F0BB0A9C2B27BB6B00849F33 /* ProfessionalProyects */,
+				F0BB0A912B27B84B00849F33 /* License */,
+				F0BB0A862B27B2CF00849F33 /* Languages */,
+				F0BB0A7B2B27B02600849F33 /* Experience */,
+				F0BB0A702B27AD6500849F33 /* Studies */,
+				F0BB0A652B27A77E00849F33 /* Curriculum */,
 				F0B3CC002B1B823000ADC433 /* Login */,
 				F094863F2B0CC2F8000F4B13 /* OfferCompany */,
 				F094863E2B0CC2EC000F4B13 /* Company */,
@@ -223,6 +327,12 @@
 				F09486582B0CC4EC000F4B13 /* Company.swift */,
 				F094865A2B0CC578000F4B13 /* OfferCompany.swift */,
 				F0B3CC092B1B838500ADC433 /* Login.swift */,
+				F0BB0A6C2B27A85900849F33 /* Curriculum.swift */,
+				F0BB0A6E2B27AC7B00849F33 /* Studies.swift */,
+				F0BB0A792B27AF6500849F33 /* Experience.swift */,
+				F0BB0A842B27B1FD00849F33 /* Languages.swift */,
+				F0BB0A8F2B27B54700849F33 /* License.swift */,
+				F0BB0A9A2B27BA6100849F33 /* ProfessionalProyects.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -231,7 +341,6 @@
 			isa = PBXGroup;
 			children = (
 				F094865D2B0CC5AC000F4B13 /* NetworkClient.swift */,
-				F094865F2B0CC5DB000F4B13 /* NetworkError.swift */,
 				F09486612B0CC5EF000F4B13 /* URLSessionNetworkClient.swift */,
 			);
 			path = NetworkClient;
@@ -245,6 +354,7 @@
 				F09486672B0CC695000F4B13 /* Company */,
 				F09486662B0CC687000F4B13 /* OfferCompany */,
 				F09486652B0CC67F000F4B13 /* Register */,
+				F0BB0A4F2B27A52200849F33 /* Curriculum */,
 				F09486642B0CC64E000F4B13 /* Login */,
 			);
 			path = Features;
@@ -271,6 +381,9 @@
 		F09486662B0CC687000F4B13 /* OfferCompany */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFF7982B24FD730072AE3E /* RequestOfferDetailView */,
+				F0CFF7912B24EBE90072AE3E /* RequestOfferView */,
+				F0CFF78C2B24DD350072AE3E /* FollowOfferView */,
 				F09486682B0CC76D000F4B13 /* OfferCompanyDetailView */,
 				F09486692B0CC789000F4B13 /* OfferCompanyView */,
 			);
@@ -300,6 +413,7 @@
 			children = (
 				F094866E2B0CC7F5000F4B13 /* OfferCompanyMainView.swift */,
 				F094866C2B0CC7DA000F4B13 /* OfferCompanyViewModel.swift */,
+				F09BE89C2B237A93009C788C /* OfferCompanyRowView.swift */,
 			);
 			path = OfferCompanyView;
 			sourceTree = "<group>";
@@ -312,6 +426,150 @@
 				F0B3CC052B1B830100ADC433 /* LiveLoginRemoteService.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F0BB0A4F2B27A52200849F33 /* Curriculum */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A502B27A63600849F33 /* CurriculumView.swift */,
+				F0BB0A522B27A64500849F33 /* CurriculumViewModel.swift */,
+				F0BB0A582B27A67100849F33 /* ProfessionalProyects */,
+				F0BB0A572B27A66700849F33 /* License */,
+				F0BB0A562B27A66000849F33 /* Languages */,
+				F0BB0A552B27A65A00849F33 /* Experience */,
+				F0BB0A542B27A64C00849F33 /* Studies */,
+			);
+			path = Curriculum;
+			sourceTree = "<group>";
+		};
+		F0BB0A542B27A64C00849F33 /* Studies */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A592B27A68E00849F33 /* StudiesRowView.swift */,
+			);
+			path = Studies;
+			sourceTree = "<group>";
+		};
+		F0BB0A552B27A65A00849F33 /* Experience */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A5B2B27A69F00849F33 /* ExperienceRowView.swift */,
+			);
+			path = Experience;
+			sourceTree = "<group>";
+		};
+		F0BB0A562B27A66000849F33 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A5D2B27A6B400849F33 /* LanguagesRowView.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		F0BB0A572B27A66700849F33 /* License */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A5F2B27A6C800849F33 /* LicenseRowView.swift */,
+			);
+			path = License;
+			sourceTree = "<group>";
+		};
+		F0BB0A582B27A67100849F33 /* ProfessionalProyects */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A612B27A6DD00849F33 /* ProfessionalProyectsRowView.swift */,
+			);
+			path = ProfessionalProyects;
+			sourceTree = "<group>";
+		};
+		F0BB0A652B27A77E00849F33 /* Curriculum */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A662B27A7A200849F33 /* CurriculumRemoteService.swift */,
+				F0BB0A682B27A7BE00849F33 /* MockCurriculumRemoteService.swift */,
+				F0BB0A6A2B27A7D800849F33 /* LiveCurriculumRemoteService.swift */,
+			);
+			path = Curriculum;
+			sourceTree = "<group>";
+		};
+		F0BB0A702B27AD6500849F33 /* Studies */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A712B27AD7B00849F33 /* StudiesRemoteService.swift */,
+				F0BB0A732B27AD9800849F33 /* MockStudiesRemoteService.swift */,
+				F0BB0A752B27ADAB00849F33 /* LiveStudiesRemoteService.swift */,
+			);
+			path = Studies;
+			sourceTree = "<group>";
+		};
+		F0BB0A7B2B27B02600849F33 /* Experience */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A7C2B27B04300849F33 /* ExperienceRemoteService.swift */,
+				F0BB0A7E2B27B05A00849F33 /* MockExperienceRemoteService.swift */,
+				F0BB0A802B27B06B00849F33 /* LiveExperienceRemoteService.swift */,
+			);
+			path = Experience;
+			sourceTree = "<group>";
+		};
+		F0BB0A862B27B2CF00849F33 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A872B27B2E400849F33 /* LanguagesRemoteService.swift */,
+				F0BB0A892B27B2F900849F33 /* MockLanguageRemoteService.swift */,
+				F0BB0A8B2B27B31E00849F33 /* LiveLanguageRemoteService.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		F0BB0A912B27B84B00849F33 /* License */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A922B27B86700849F33 /* LicenseRemoteService.swift */,
+				F0BB0A942B27B87900849F33 /* MockLicenseRemoteService.swift */,
+				F0BB0A962B27B89000849F33 /* LiveLicenseRemoteService.swift */,
+			);
+			path = License;
+			sourceTree = "<group>";
+		};
+		F0BB0A9C2B27BB6B00849F33 /* ProfessionalProyects */ = {
+			isa = PBXGroup;
+			children = (
+				F0BB0A9D2B27BB8800849F33 /* ProfessionalProyectsRemoteService.swift */,
+				F0BB0A9F2B27BB9F00849F33 /* MockProfessionalProyectsRemoteService.swift */,
+				F0BB0AA12B27BBB600849F33 /* LiveProfessionalProyectsRemoteService.swift */,
+			);
+			path = ProfessionalProyects;
+			sourceTree = "<group>";
+		};
+		F0CFF78C2B24DD350072AE3E /* FollowOfferView */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFF78D2B24DD4E0072AE3E /* FollowOfferView.swift */,
+				F0CFF78F2B24DD5F0072AE3E /* FollowOfferViewModel.swift */,
+			);
+			path = FollowOfferView;
+			sourceTree = "<group>";
+		};
+		F0CFF7912B24EBE90072AE3E /* RequestOfferView */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFF7922B24EC010072AE3E /* RequestOfferView.swift */,
+				F0CFF7942B24EC1C0072AE3E /* RequestOfferViewModel.swift */,
+				F094865F2B0CC5DB000F4B13 /* NetworkError.swift */,
+				F0CFF7962B24FB520072AE3E /* RequestOfferRowView.swift */,
+			);
+			path = RequestOfferView;
+			sourceTree = "<group>";
+		};
+		F0CFF7982B24FD730072AE3E /* RequestOfferDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFF7992B24FE0A0072AE3E /* RequestOfferDetailView.swift */,
+				F0CFF79B2B24FE240072AE3E /* RequestOfferDetailViewModel.swift */,
+				F0CFF79D2B2513DE0072AE3E /* RequestOfferDetailRowView.swift */,
+			);
+			path = RequestOfferDetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,43 +642,89 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0BB0AA02B27BB9F00849F33 /* MockProfessionalProyectsRemoteService.swift in Sources */,
+				F0BB0A512B27A63600849F33 /* CurriculumView.swift in Sources */,
+				F0BB0A7F2B27B05A00849F33 /* MockExperienceRemoteService.swift in Sources */,
 				F09486762B0CC8A0000F4B13 /* CompanyViewModel.swift in Sources */,
+				F0BB0A692B27A7BE00849F33 /* MockCurriculumRemoteService.swift in Sources */,
+				F0BB0A9B2B27BA6100849F33 /* ProfessionalProyects.swift in Sources */,
+				F0CFF79C2B24FE240072AE3E /* RequestOfferDetailViewModel.swift in Sources */,
+				F0BB0A992B27B92F00849F33 /* LicenseRepository.swift in Sources */,
 				F0B3CBFF2B1B7D7000ADC433 /* SplashView.swift in Sources */,
 				F09486592B0CC4EC000F4B13 /* Company.swift in Sources */,
+				F0BB0A8C2B27B31E00849F33 /* LiveLanguageRemoteService.swift in Sources */,
 				F094867E2B0CC8EF000F4B13 /* LoginViewModel.swift in Sources */,
 				F09486712B0CC822000F4B13 /* OfferCompanyDetailViewModel.swift in Sources */,
+				F0BB0A8A2B27B2F900849F33 /* MockLanguageRemoteService.swift in Sources */,
 				F09486742B0CC88C000F4B13 /* CompanyView.swift in Sources */,
 				F09486482B0CC3B7000F4B13 /* CompanyRemoteService.swift in Sources */,
+				F0BB0A532B27A64500849F33 /* CurriculumViewModel.swift in Sources */,
 				F0B3CC082B1B831400ADC433 /* LoginRepository.swift in Sources */,
+				F0BB0A932B27B86700849F33 /* LicenseRemoteService.swift in Sources */,
 				F094865B2B0CC578000F4B13 /* OfferCompany.swift in Sources */,
 				F09486442B0CC373000F4B13 /* MockOfferCompanyRemoteService.swift in Sources */,
+				F0BB0A602B27A6C800849F33 /* LicenseRowView.swift in Sources */,
 				F094863C2B0CC1D9000F4B13 /* CompanyRepository.swift in Sources */,
 				F094866D2B0CC7DA000F4B13 /* OfferCompanyViewModel.swift in Sources */,
+				F0BB0A642B27A75C00849F33 /* CurriculumRepository.swift in Sources */,
 				F094864A2B0CC3D7000F4B13 /* MockCompanyRemoteService.swift in Sources */,
+				F0CFF7952B24EC1C0072AE3E /* RequestOfferViewModel.swift in Sources */,
+				F0BB0A902B27B54700849F33 /* License.swift in Sources */,
+				F0BB0A622B27A6DD00849F33 /* ProfessionalProyectsRowView.swift in Sources */,
+				F0BB0AA22B27BBB600849F33 /* LiveProfessionalProyectsRemoteService.swift in Sources */,
+				F0CFF7972B24FB520072AE3E /* RequestOfferRowView.swift in Sources */,
+				F0BB0A9E2B27BB8800849F33 /* ProfessionalProyectsRemoteService.swift in Sources */,
 				F09486362B0CC0B7000F4B13 /* NetworkConstants.swift in Sources */,
+				F0BB0A812B27B06B00849F33 /* LiveExperienceRemoteService.swift in Sources */,
 				F09486552B0CC4C6000F4B13 /* APIResponse.swift in Sources */,
 				F0B3CC0A2B1B838500ADC433 /* Login.swift in Sources */,
 				F094864C2B0CC407000F4B13 /* LiveCompanyRemoteService.swift in Sources */,
+				F0BB0A782B27AE6900849F33 /* StudiesRepository.swift in Sources */,
 				F09486602B0CC5DB000F4B13 /* NetworkError.swift in Sources */,
+				F0BB0A742B27AD9800849F33 /* MockStudiesRemoteService.swift in Sources */,
 				F094866F2B0CC7F5000F4B13 /* OfferCompanyMainView.swift in Sources */,
 				F09486502B0CC43F000F4B13 /* TokenRemoteService.swift in Sources */,
+				F0BB0A832B27B11C00849F33 /* ExperienceRepository.swift in Sources */,
 				F09486382B0CC1C0000F4B13 /* OfferCompanyRepository.swift in Sources */,
+				F0BB0A882B27B2E400849F33 /* LanguagesRemoteService.swift in Sources */,
+				F0CFF78E2B24DD4E0072AE3E /* FollowOfferView.swift in Sources */,
+				F0CFF79A2B24FE0A0072AE3E /* RequestOfferDetailView.swift in Sources */,
+				F0BB0A8E2B27B3CC00849F33 /* LanguagesRepository.swift in Sources */,
+				F0BB0A952B27B87900849F33 /* MockLicenseRemoteService.swift in Sources */,
+				F0CFF7902B24DD5F0072AE3E /* FollowOfferViewModel.swift in Sources */,
+				F0CFF79E2B2513DE0072AE3E /* RequestOfferDetailRowView.swift in Sources */,
 				F094865E2B0CC5AC000F4B13 /* NetworkClient.swift in Sources */,
 				F094867A2B0CC8D7000F4B13 /* RegisterViewModel.swift in Sources */,
 				F09486572B0CC4D6000F4B13 /* Token.swift in Sources */,
 				F094866B2B0CC7BC000F4B13 /* OfferCompanyDetailView.swift in Sources */,
+				F0BB0A972B27B89000849F33 /* LiveLicenseRemoteService.swift in Sources */,
+				F0BB0A762B27ADAB00849F33 /* LiveStudiesRemoteService.swift in Sources */,
 				F094864E2B0CC42A000F4B13 /* LiveTokenRemoteService.swift in Sources */,
+				F0BB0A7D2B27B04300849F33 /* ExperienceRemoteService.swift in Sources */,
 				F09486782B0CC8CC000F4B13 /* RegisterView.swift in Sources */,
 				F0B3CC062B1B830100ADC433 /* LiveLoginRemoteService.swift in Sources */,
+				F0BB0A722B27AD7B00849F33 /* StudiesRemoteService.swift in Sources */,
+				F0BB0AA42B27BC4900849F33 /* ProfessionalProyectsRepository.swift in Sources */,
+				F0BB0A7A2B27AF6500849F33 /* Experience.swift in Sources */,
 				F09486242B0CBB9D000F4B13 /* ContentView.swift in Sources */,
 				F09486422B0CC34A000F4B13 /* LiveOfferCompanyRemoteService.swift in Sources */,
 				F09486622B0CC5EF000F4B13 /* URLSessionNetworkClient.swift in Sources */,
 				F094863A2B0CC1CB000F4B13 /* TokenRepository.swift in Sources */,
+				F0BB0A6B2B27A7D800849F33 /* LiveCurriculumRemoteService.swift in Sources */,
+				F0BB0A5C2B27A69F00849F33 /* ExperienceRowView.swift in Sources */,
+				F09BE89D2B237A93009C788C /* OfferCompanyRowView.swift in Sources */,
+				F0BB0A672B27A7A200849F33 /* CurriculumRemoteService.swift in Sources */,
+				F0BB0A852B27B1FD00849F33 /* Languages.swift in Sources */,
 				F0B3CC022B1B82D000ADC433 /* LoginRemoteService.swift in Sources */,
+				F0BB0A6F2B27AC7B00849F33 /* Studies.swift in Sources */,
 				F09486222B0CBB9D000F4B13 /* AprexiPraxisApp.swift in Sources */,
 				F0B3CC042B1B82EB00ADC433 /* MockLoginRemoteService.swift in Sources */,
+				F0BB0A5E2B27A6B400849F33 /* LanguagesRowView.swift in Sources */,
+				F0BB0A5A2B27A68E00849F33 /* StudiesRowView.swift in Sources */,
+				F0BB0A6D2B27A85900849F33 /* Curriculum.swift in Sources */,
 				F09486462B0CC38A000F4B13 /* OfferCompanyRemoteService.swift in Sources */,
 				F09486302B0CC042000F4B13 /* Coordinator.swift in Sources */,
+				F0CFF7932B24EC010072AE3E /* RequestOfferView.swift in Sources */,
 				F094867C2B0CC8E3000F4B13 /* LoginView.swift in Sources */,
 				F09486522B0CC474000F4B13 /* MockTokenRemoteService.swift in Sources */,
 			);

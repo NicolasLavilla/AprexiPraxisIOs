@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CompanyRemoteService {
-    func getCompany() async throws -> [Company]
+    func getCompany(idUser: Int, idCompany: Int, token: String) async throws -> Company
 }

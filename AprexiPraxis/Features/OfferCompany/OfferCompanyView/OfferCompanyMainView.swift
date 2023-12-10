@@ -8,58 +8,54 @@ import SwiftUI
 
 struct OfferCompanyMainView: View {
     @StateObject private var viewModel: OfferCompanyViewModel
-    @State private var offers: [Offer] = []
-
+    @EnvironmentObject var coordinator: Coordinator
+    
     init(idUser: Int, token: String) {
         _viewModel = StateObject(wrappedValue: OfferCompanyViewModel(offerCompanyRepository: OfferCompanyRepository(remoteService: LiveOfferCompanyRemoteService(networkClient: URLSessionNetworkClient()))))
         self.idUser = idUser
         self.token = token
     }
-
+    
     private let idUser: Int
     private let token: String
-
+    
     var body: some View {
-        NavigationView {
-            List(offers, id: \.idOffer) { offer in
-                NavigationLink(destination: OfferCompanyDetailView(idOffer: offer.idOffer, idUser: idUser, token: token)) {
-                    VStack(alignment: .leading) {
-                        Text(offer.offerTitle)
-                            .font(.headline)
-                        Text(offer.nameCompany)
+        NavigationStack {
+            if let offers = viewModel.listOfferCompany?.offer, !offers.isEmpty {
+                List {
+                    ForEach(offers) { offer in
+                        makeGoToOfferCompanyDetailNavigationLink(for: offer)
                     }
                 }
-            }
-
-            .navigationBarTitle("Ofertas")
-            .onAppear {
-                fetchOffers()
-            }
-            .onReceive(viewModel.$listOfferCompany) { listOfferCompany in
-                if let unwrappedListOfferCompany = listOfferCompany {
-                    offers = unwrappedListOfferCompany.offer
-                } else {
-                    offers = [] // No offers available, reset the offers
-                    print("No offers available")
-                    // Handle case when no offers are available
+                .navigationTitle("List Offers")
+                .task {
+                    await viewModel.getListOfferCompany(idUser: idUser, token: token)
                 }
-            }
-            .onReceive(viewModel.$error) { error in
-                if let error = error {
-                    print("Error: \(error.localizedDescription)")
-                    // Handle error appropriately
+            } else {
+                VStack {
+                    Text("No hay ofertas disponibles")
+                        .foregroundColor(.gray)
+                }
+                .navigationTitle("List Offers")
+                .task {
+                    await viewModel.getListOfferCompany(idUser: idUser, token: token)
                 }
             }
         }
     }
-
-    private func fetchOffers() {
-        Task {
-            await viewModel.getListOfferCompany(idUser: idUser, token: token)
+    
+    private func makeGoToOfferCompanyDetailNavigationLink(for offer: Offer) -> some View {
+        NavigationLink {
+            coordinator.makeOfferCompanyDetailView(idOffer: offer.idOffer, idUser: idUser, token: token)
+        } label: {
+            OfferCompanyRowView(offer: offer)
         }
     }
+    
 }
 
 #Preview {
-    OfferCompanyMainView(idUser: 4, token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4MywidXNlcm5hbWUiOiJNYXJpbyIsImV4cCI6MTcwMjAyODAyMSwia2lkIjoia2lkXzY1NzJkNGU1OGY4OWE2LjM0MDc1NDk5In0.IxoOL9Cvfau-ZLY5MoYACCHOVjXGDqOh08QM1-DUYMc")
+    let coordinator = Coordinator(mock: true)
+    return coordinator.makeOfferCompanyMainView( idUser: 4, token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6Ik1hcmlhIiwiZXhwIjoxNzAyMzg1NDYzLCJraWQiOiJraWRfNjU3ODQ5Mjc1NzcxYjAuMDA1NDIwNjkifQ._IhI04w17dXKtO3jzQwLXj7msRQry48hX2HwVHs0m0I")
+        .environmentObject(coordinator)
 }

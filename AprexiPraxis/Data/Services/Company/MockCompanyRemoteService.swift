@@ -9,7 +9,7 @@ import Foundation
 
 struct MockCompanyRemoteService: CompanyRemoteService {
     
-    func getCompany() async throws -> [Company] {
-        return [.example, .example, .example]
+    func getCompany(idUser: Int, idCompany: Int, token: String) async throws -> Company {
+        return .example
     }
 }

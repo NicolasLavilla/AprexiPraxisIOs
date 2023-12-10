@@ -14,7 +14,9 @@ struct CompanyRepository {
         self.remoteService = remoteService
     }
     
-    func getListOfferCompany() async throws -> [Company] {
-        return try await remoteService.getCompany()
+    func getCompany(idUser: Int, idCompany: Int, token: String) async throws -> Company {
+        return try await remoteService.getCompany(idUser: idUser, idCompany: idCompany, token: token)
     }
+    
+    
 }

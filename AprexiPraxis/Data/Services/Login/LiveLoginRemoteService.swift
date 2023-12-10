@@ -20,7 +20,12 @@ struct LiveLoginRemoteService: LoginRemoteService {
             "email": email,
             "password": password
         ]
+        let login: Login = try await networkClient.getCall(url: NetworkConstants.loginNetworkUrl, queryParams: queryParams)
         
-        return try await networkClient.getCall(url: NetworkConstants.loginNetworkUrl, queryParams: queryParams)
+        UserDefaults.standard.set( login.token , forKey: "token")
+        UserDefaults.standard.set( login.idUser , forKey: "idUser")
+        
+        return login
+       // return try await networkClient.getCall(url: NetworkConstants.loginNetworkUrl, queryParams: queryParams)
     }
 }

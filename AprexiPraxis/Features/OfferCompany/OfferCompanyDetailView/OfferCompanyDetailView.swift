@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct OfferCompanyDetailView: View {
-    
+    @EnvironmentObject var coordinator: Coordinator
     @StateObject private var viewModel: OfferCompanyDetailViewModel
      
      init(idOffer: Int, idUser: Int, token: String) {
@@ -21,68 +21,128 @@ struct OfferCompanyDetailView: View {
      private let idOffer: Int
      private let idUser: Int
      private let token: String
+   
     
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading, spacing: 20) {
-                if viewModel.isLoading {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .scaleEffect(1.5)
-                } else if let offer = viewModel.offer {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("Offer Title:")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                        Text(offer.offerTitle)
+        NavigationStack {
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: 20) {
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .scaleEffect(1.5)
+                    } else if let offer = viewModel.offer {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("Offer Title:")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            Text(offer.offerTitle)
+                            
+                            Text("Company:")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            NavigationLink(
+                                destination: coordinator.makeCompanyView(idUser: idUser, idCompany: offer.idCompany, token: token),
+                                label: {
+                                    Text(offer.nameCompany)
+                                }
+                            )
+                            
+                            
+                            Text("Date of Publication:")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            Text(offer.datePublication)
+                            
+                            Text("Job Description:")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            Text(offer.jobDescription)
+                            
+                            Text("Salary:")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            Text("\(offer.salary)")
+                            
+                            Spacer()
+                            Button(action: {
+                                requestFunction()
+                            }) {
+                                Text("Inscribirse")
+                                    .padding()
+                                    .foregroundColor(.white)
+                                    .background(viewModel.isRequest ? Color.gray : Color.blue)
+                                    .cornerRadius(8)
+                            }
+                            .disabled(viewModel.isRequest)
+                            
+                        }
+                        .padding()
                         
-                        Text("Company:")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                        Text(offer.nameCompany)
                         
-                        Text("Date of Publication:")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                        Text(offer.datePublication)
                         
-                        Text("Job Description:")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                        Text(offer.jobDescription)
-                        
-                        Text("Salary:")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                        Text("\(offer.salary)")
-                        
-                        // Añade más detalles aquí según sea necesario
-                        
+                    } else if let error = viewModel.error {
+                        Text("Error: \(error.localizedDescription)")
+                            .foregroundColor(.red)
                     }
-                    .padding()
-                } else if let error = viewModel.error {
-                    Text("Error: \(error.localizedDescription)")
-                        .foregroundColor(.red)
+                }
+                .padding(.horizontal)
+
+            }
+            .navigationTitle(viewModel.offer?.offerTitle ?? "Offer Detail")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // Llama a tu función aquí
+                        followFunction()
+                    }) {
+                        Image(systemName: viewModel.isFollowed ? "heart.fill" : "heart")
+                    }
                 }
             }
-            .padding(.horizontal)
-        }
+            .onAppear {
 
-        .navigationTitle(viewModel.offer?.offerTitle ?? "Offer Detail")
-                .onAppear {
-                    Task {
-                        await viewModel.getOfferCompany(idOffer: idOffer, idUser: idUser, token: token)
-                    }
-                }
+                getOfferCompany(idOffer: idOffer, idUser: idUser, token: token)
+            }
+        }
+    }
+    private func followFunction() {
+        if viewModel.isFollowed {
+            Task{
+                await viewModel.setDeleteFollowOffer(idOffer: viewModel.offer!.idOffer, idUser: idUser, token: token)
+            }
+        } else {
+            Task{
+                await viewModel.setInsertFollowOffer(idOffer: viewModel.offer!.idOffer, idUser: idUser, token: token)
+            }
+
+        }
     }
     
-    func getTypeImage(offer: Offer) -> String {
-        // Reemplazar con la lógica correspondiente según offer
-        return "car" // Valor predeterminado
+    private func requestFunction() {
+       
+        if viewModel.isRequest {
+            
+        } else {
+            Task{
+                await viewModel.setInsertRequestOffer(idOffer: viewModel.offer!.idOffer, idUser: idUser, token: token)
+            }
+
+        }
     }
+
+    
+    private func getOfferCompany(idOffer: Int, idUser: Int, token: String){
+        Task {
+            await viewModel.getOfferCompany(idOffer: idOffer, idUser: idUser, token: token)
+        }
+    }
+    
 }
 
-// Reemplaza los valores con tus datos reales
 #Preview {
-    OfferCompanyDetailView(idOffer: 4, idUser: 4, token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4MywidXNlcm5hbWUiOiJNYXJpbyIsImV4cCI6MTcwMTUyMjI2NSwia2lkIjoia2lkXzY1NmIxZDQ5ZDhlYTAwLjM2NTc5NDAxIn0.c9ZwC_PK98Z-P_22h7veWX4EqR823cOW2LpYfXv2KPU")
+    let coordinator = Coordinator(mock: true)
+    return coordinator.makeOfferCompanyDetailView(idOffer: 4, idUser: 4, token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6Ik1hcmlhIiwiZXhwIjoxNzAyMzkxMzA2LCJraWQiOiJraWRfNjU3ODVmZmE2YTcyYTEuMDU3NzExMjcifQ.onWr-c7GoJJr6iJTnqWSJkakq_UYlJ4-7ABHZ5FJWPQ")
+        .environmentObject(coordinator)
 }
+
